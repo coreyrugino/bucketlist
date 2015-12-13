@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-
+  resources :user
   resources :user_list
   resources :post
 
