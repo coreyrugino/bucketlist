@@ -1,0 +1,13 @@
+<% if user_signed_in? %>
+	<%= form_for @post do |f| %>
+		<!-- this is where the file field for avatar picture goes. -->
+		<%= f.label :title %>
+		<%= f.text_area :title %>
+		<br />
+		<%= f.label :author %>
+		<%= f.text_area :author %>
+		<%= f.hidden_field :user_id, value: params[:user_id] %>
+		<br />
+		<%= f.submit %>
+ <% end %>
+<% end %>
